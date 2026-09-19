@@ -1,70 +1,192 @@
-**Network Packet Sniffer**
+# Network Sniffer & Traffic Analyzer
 
-:pushpin:**Overview**
+A Python-based network monitoring tool built with **Scapy** to capture, analyze, and log IPv4 network traffic in real time.
 
-A network packet sniffer is a cybersecurity tool designed to monitor, capture, and analyze network traffic. This project implements a Python-based packet sniffer that records network activity and logs captured data for security analysis.
+The tool extracts packet-level information such as IP addresses, protocols, ports, packet size, and basic traffic indicators, then stores the captured data in a timestamped CSV file for further analysis.
 
-:pushpin:**Features**
+---
 
-* Real-time packet capturing
+## 🔎 Overview
 
-* Automatic logging in CSV format
+Network traffic analysis is an important part of security monitoring and incident investigation.
 
-* Packet analysis (IP, TCP, UDP, ICMP)
+This project demonstrates practical experience with:
 
-* Detection of suspicious network activity
+- Real-time packet capture
+- Network traffic analysis
+- TCP/UDP/ICMP identification
+- IP and port extraction
+- Packet size analysis
+- Rule-based traffic indicators
+- CSV-based security logging
+- Python network security programming
 
-* Automated storage of logs without manual input
+---
 
+## 🚀 Features
 
-:pushpin:**Prerequisites**
+- **Real-Time Packet Capture**
+  - Captures IPv4 packets using Scapy.
 
-Python 3.x
+- **Protocol Identification**
+  - Identifies TCP, UDP, ICMP, and other IP traffic.
 
-:pushpin:**Required libraries:**
+- **IP Address Extraction**
+  - Records source and destination IP addresses.
 
-scapy
+- **Port Analysis**
+  - Extracts source and destination ports for TCP and UDP traffic.
 
-pandas
+- **Packet Size Analysis**
+  - Records packet size and flags unusually large packets as a basic traffic indicator.
 
-datetime
+- **Traffic Indicators**
+  - Identifies observed web traffic, ICMP traffic, and large packets using simple rule-based logic.
 
-:pushpin:**Install dependencies using:**
+- **Automatic CSV Logging**
+  - Saves captured packet information to a timestamped CSV file.
 
-pip install scapy pandas
+- **Terminal Monitoring**
+  - Displays packet information in real time while capturing.
 
-:pushpin:**Installation**
+---
 
-**Clone the repository:**
+## 🛠️ Technologies Used
 
-git clone https://github.com/your-repo/network-sniffer.git
+- Python
+- Scapy
+- CSV
+- TCP/IP Networking
 
-**Navigate to the project folder:**
+---
 
-cd network-sniffer
+## 📊 Captured Data
 
-**Run the script:**
+Each captured packet can contain:
 
-python sniffer.py
+| Field | Description |
+|---|---|
+| Timestamp | Time when the packet was processed |
+| Source IP | Source IPv4 address |
+| Destination IP | Destination IPv4 address |
+| Protocol | TCP, UDP, ICMP, or other |
+| Source Port | Source port when available |
+| Destination Port | Destination port when available |
+| Packet Size | Packet size in bytes |
+| Traffic Indicator | Basic rule-based traffic observation |
 
-:pushpin:**Usage**
+---
 
-The script will automatically start capturing network traffic.
+## 🔄 Processing Workflow
 
-Captured packets are analyzed and logged.
+```text
+Network Traffic
+      ↓
+Packet Capture
+      ↓
+IPv4 Detection
+      ↓
+Protocol Identification
+      ↓
+IP / Port Extraction
+      ↓
+Packet Size Analysis
+      ↓
+Traffic Indicator
+      ↓
+CSV Logging
+      ↓
+Terminal Output
+```
 
-The log file is saved automatically in the default location.
+---
 
-Press Ctrl + C to stop the sniffer.
+### ⚙️ Installation
 
-:pushpin:**Future Enhancements**
+1. Clone the repository:
 
-Implement AI-based anomaly detection
+git clone https://github.com/Ms-Nasir/Network-Sniffer.git
 
-Develop a GUI for better usability
+2. Navigate to the project:
 
-Add automated alert notifications for suspicious traffic
+cd Network-Sniffer
 
-**License**
+3. Install the required dependency:
 
-This project is licensed under the MIT License.
+pip install scapy 
+
+4. Or install from the requirements file:
+
+pip install -r requirements.txt
+
+---
+
+### 🔐 Cybersecurity Applications
+
+This project demonstrates concepts relevant to:
+
+- Security monitoring
+- Network traffic analysis
+- SOC operations
+- Incident investigation
+- Network forensics
+- Packet analysis
+- Detection engineering fundamentals
+- Cybersecurity automation
+
+---
+
+### 🎯 Learning Objectives
+
+The project was developed to strengthen practical understanding of:
+
+- Network packet structures
+- TCP/IP communication
+- Scapy packet manipulation
+- Real-time traffic monitoring
+- Network security analysis
+- Security event logging
+- Python automation
+
+---
+
+### 🔮 Future Enhancements
+
+Potential improvements include:
+
+- Advanced anomaly detection
+- Packet filtering by protocol, IP, and port
+- Network statistics and visualizations
+- Detection of port scanning patterns
+- Detection of repeated connection attempts
+- DNS and HTTP analysis
+- Alert severity classification
+- PCAP export
+- Web-based monitoring dashboard
+- Integration with SIEM platforms
+
+--- 
+
+### ⚠️ Limitations
+
+This project currently uses basic rule-based traffic indicators and should not be considered a full Intrusion Detection System (IDS).
+
+The presence of TCP/UDP/ICMP traffic or commonly used ports does not by itself indicate malicious activity.
+
+More advanced detection would require traffic correlation, behavioral analysis, signatures, or machine-learning techniques.
+
+--- 
+
+### ⚖️ Disclaimer
+
+This project is intended for educational, cybersecurity research, and authorized network-monitoring purposes only.
+
+Only capture and analyze traffic on networks where you have appropriate permission.
+
+---
+
+### 👩‍💻 Author
+
+Ms. Nasir
+
+Cybersecurity | SOC Operations | Network Security | Digital Forensics
